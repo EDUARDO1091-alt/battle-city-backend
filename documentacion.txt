@@ -1,0 +1,46 @@
+AUTENTICACION
+url:http://localhost:5000/api/
+
+Datos JSON:
+{
+    "usu_usuario": "valor"
+    "usu_contrasena": "valor"
+}
+
+REQUIERE ENVIAR TOKEN EN HEADERS DE LAS PETICIONES
+    CLAVE: Autorization
+    valor: Beare TOKEN
+
+    Metodo GET (MULTIPLES REGISTROS)
+    url:http://localhost:5000/api/usuarios?page=1&cadena=valor
+ 
+    Metodo GET (REGISTROS unico)
+    url:http://localhost:5000/api/usuarios/id
+
+    METODO POST
+    url: http://localhost:5000/api/usuarios
+    Datos.JSON:{
+        "usu_usuario": "", 
+        "usu_contrasena": "", 
+        "usu_nombre": "", 
+        "usu_correo": "", 
+        "usu_fecha_registro": "", 
+        "usu_rol": "" 
+    }
+
+    METODO PUT
+     url: http://localhost:5000/api/usuarios/ID
+     Datos.JSON:{
+        "usu_usuario": "", 
+        "usu_nombre": "", 
+        "usu_correo": "", 
+        "usu_fecha_registro": "", 
+        "usu_rol": "" 
+    }
+
+    METODO DELETE
+    url http://localhost:5000/api/usuarios/ID
+
+    npm install nodemon --save-dev
+    npm run dev
+
